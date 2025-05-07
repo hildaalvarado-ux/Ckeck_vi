@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/marino"
+    tools:context=".configuracionActivity2">
+
+    <LinearLayout
+        android:id="@+id/headerLayout"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:background="#1B485B"
+        android:padding="8dp"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Botón Volver (izquierda) -->
+
+        <!-- Botón Usuario (derecha) -->
+        <ImageView
+            android:id="@+id/volver"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:padding="9dp"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true"
+            android:contentDescription="Volver"
+            android:scaleType="fitStart"
+            android:src="@drawable/arrow_left_circle_fill"
+            />
+
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/rectangulo"
+        android:layout_width="387dp"
+        android:layout_height="673dp"
+        android:background="@drawable/rectangulo"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/headerLayout" />
+
+    <TextView
+        android:id="@+id/config"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="configuración"
+        android:textAlignment="center"
+        android:textColor="@color/Azul"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/rectangulo"
+        app:layout_constraintHorizontal_bias="0.456"
+        app:layout_constraintStart_toStartOf="@+id/rectangulo"
+        app:layout_constraintTop_toTopOf="@+id/rectangulo" />
+
+    <Button
+        android:id="@+id/perfil"
+        android:layout_width="353dp"
+        android:layout_height="67dp"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="@color/marino"
+        android:text="Perfil"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/rectangulo"
+        app:layout_constraintHorizontal_bias="0.438"
+        app:layout_constraintStart_toStartOf="@+id/rectangulo"
+        app:layout_constraintTop_toBottomOf="@+id/config" />
+
+    <Button
+        android:id="@+id/historial2"
+        android:layout_width="353dp"
+        android:layout_height="67dp"
+        android:backgroundTint="@color/Azul"
+        android:text="Historial"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/rectangulo"
+        app:layout_constraintHorizontal_bias="0.441"
+        app:layout_constraintStart_toStartOf="@+id/rectangulo"
+        app:layout_constraintTop_toBottomOf="@+id/perfil" />
+
+    <Button
+        android:id="@+id/sobrenosotros"
+        android:layout_width="353dp"
+        android:layout_height="67dp"
+        android:backgroundTint="@color/marino"
+        android:text="Sobre Nosotros"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/rectangulo"
+        app:layout_constraintHorizontal_bias="0.441"
+        app:layout_constraintStart_toStartOf="@+id/rectangulo"
+        app:layout_constraintTop_toBottomOf="@+id/historial2" />
+
+    <Button
+        android:id="@+id/preguntas"
+        android:layout_width="353dp"
+        android:layout_height="67dp"
+        android:backgroundTint="@color/Azul"
+        android:text="Preguntas Frecuentes"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/rectangulo"
+        app:layout_constraintStart_toStartOf="@+id/rectangulo"
+        app:layout_constraintTop_toBottomOf="@+id/sobrenosotros" />
+
+    <Button
+        android:id="@+id/cerrarsesion"
+        android:layout_width="353dp"
+        android:layout_height="67dp"
+        android:backgroundTint="@color/marino"
+        android:text="Cerrar Sesion"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/rectangulo"
+        app:layout_constraintStart_toStartOf="@+id/rectangulo"
+        app:layout_constraintTop_toBottomOf="@+id/preguntas" />
+
+    <LinearLayout
+        android:id="@+id/bottomNavigationBar"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:background="#1B485B"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/inicio"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:padding="9dp"
+            android:layout_weight="1"
+            android:src="@drawable/icono_house"
+            android:clickable="true"
+            android:focusable="true"
+            android:contentDescription="Inicio" />
+
+        <ImageView
+            android:id="@+id/historial"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:padding="9dp"
+            android:layout_weight="1"
+            android:src="@drawable/icono_favorite"
+            android:clickable="true"
+            android:focusable="true"
+            android:contentDescription="Agregar" />
+
+        <ImageView
+            android:id="@+id/configuracion"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:padding="9dp"
+            android:layout_weight="1"
+            android:src="@drawable/icono_setting"
+            android:clickable="true"
+            android:focusable="true"
+            android:contentDescription="Configuración" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/perfi"
+        android:layout_width="38dp"
+        android:layout_height="38dp"
+        app:layout_constraintBottom_toBottomOf="@+id/perfil"
+        app:layout_constraintEnd_toEndOf="@+id/perfil"
+        app:layout_constraintHorizontal_bias="0.06"
+        app:layout_constraintStart_toStartOf="@+id/perfil"
+        app:layout_constraintTop_toTopOf="@+id/perfil"
+        app:layout_constraintVertical_bias="0.482"
+        app:srcCompat="@drawable/icono_user" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="38dp"
+        android:layout_height="38dp"
+        app:layout_constraintBottom_toBottomOf="@+id/historial2"
+        app:layout_constraintEnd_toEndOf="@+id/historial2"
+        app:layout_constraintHorizontal_bias="0.06"
+        app:layout_constraintStart_toStartOf="@+id/historial2"
+        app:layout_constraintVertical_bias="0.482"
+        app:layout_constraintTop_toBottomOf="@+id/perfil"
+        app:srcCompat="@drawable/icono_favorite" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="38dp"
+        android:layout_height="38dp"
+        app:layout_constraintBottom_toTopOf="@+id/preguntas"
+        app:layout_constraintEnd_toEndOf="@+id/sobrenosotros"
+        app:layout_constraintHorizontal_bias="0.06"
+        app:layout_constraintStart_toStartOf="@+id/sobrenosotros"
+        app:layout_constraintTop_toBottomOf="@+id/historial2"
+        app:layout_constraintVertical_bias="0.482"
+        app:srcCompat="@drawable/globe" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="38dp"
+        android:layout_height="38dp"
+        app:layout_constraintBottom_toBottomOf="@+id/preguntas"
+        app:layout_constraintEnd_toEndOf="@+id/preguntas"
+        app:layout_constraintHorizontal_bias="0.06"
+        app:layout_constraintStart_toStartOf="@+id/preguntas"
+        app:layout_constraintTop_toBottomOf="@+id/sobrenosotros"
+        app:layout_constraintVertical_bias="0.482"
+        app:srcCompat="@drawable/question_circle" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

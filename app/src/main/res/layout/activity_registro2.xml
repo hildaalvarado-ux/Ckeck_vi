@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/marino"
+    tools:context=".RegistroActivity2">
+
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="347dp"
+        android:layout_height="554dp"
+
+        android:background="@drawable/rectangulo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.578" />
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="156dp"
+        android:layout_height="117dp"
+        android:layout_marginStart="98dp"
+        android:layout_marginTop="112dp"
+        android:layout_marginEnd="100dp"
+        app:layout_constraintEnd_toEndOf="@+id/view"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/redondo_logo" />
+
+
+    <TextView
+        android:id="@+id/datos"
+        android:layout_width="192dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="27dp"
+        android:fontFamily="sans-serif-condensed"
+        android:text="Ingresa tus datos"
+        android:textColor="@color/Azul"
+        android:textSize="25dp"
+        app:layout_constraintEnd_toEndOf="@+id/view"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintTop_toBottomOf="@+id/logo" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/usuarioLayout"
+        android:layout_width="284dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:fontFamily="sans-serif-condensed"
+        android:hint="Crea un nombre de usuario"
+        android:textColor="@color/Azul"
+        android:textColorHint="@color/Azul"
+        app:boxStrokeColor="@color/Azul"
+        app:endIconTint="@color/Azul"
+        app:hintTextColor="@color/Azul"
+        app:cursorColor="@color/Azul"
+        app:layout_constraintEnd_toEndOf="@+id/view"
+        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintTop_toBottomOf="@+id/datos">
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/usuarioN"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:inputType="text"
+            android:textColor="@color/Azul"
+            android:textColorHint="@color/Azul"
+            android:textSize="20sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/contraNLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="284dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="sans-serif-condensed"
+        android:hint="Digite una Contraseña"
+        android:textColor="@color/Azul"
+        android:textColorHint="@color/Azul"
+        app:boxStrokeColor="@color/Azul"
+        app:endIconMode="password_toggle"
+        app:endIconTint="@color/Azul"
+        app:hintTextColor="@color/Azul"
+        app:cursorColor="@color/Azul"
+        app:layout_constraintEnd_toEndOf="@+id/view"
+        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintTop_toBottomOf="@+id/usuarioLayout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/contraN"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:inputType="textPassword"
+            android:textColor="@color/Azul"
+            android:textColorHint="@color/Azul"
+            android:textSize="20sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/edadLayout"
+        android:layout_width="284dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="sans-serif-condensed"
+        android:hint="Edad"
+        android:textColor="@color/Azul"
+        android:textColorHint="@color/Azul"
+        app:boxStrokeColor="@color/Azul"
+        app:endIconTint="@color/Azul"
+        app:hintTextColor="@color/Azul"
+        app:cursorColor="@color/Azul"
+        app:layout_constraintEnd_toEndOf="@+id/view"
+        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintTop_toBottomOf="@+id/contraNLayout">
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edadN"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:inputType="text"
+            android:textColor="@color/Azul"
+            android:textColorHint="@color/Azul"
+            android:textSize="20sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <RadioGroup
+        android:id="@+id/radioGroupSexo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@+id/view"
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintTop_toBottomOf="@+id/edadLayout">
+
+        <RadioButton
+            android:id="@+id/radioMasculino"
+            android:layout_width="126dp"
+            android:layout_height="match_parent"
+            android:text="Masculino"
+            android:textColor="@color/Azul"
+            android:textSize="18dp" />
+
+        <RadioButton
+            android:id="@+id/radioFemenino"
+            android:layout_width="126dp"
+            android:layout_height="match_parent"
+            android:text="Femenino"
+            android:textColor="@color/Azul"
+            android:textSize="18dp" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/registrar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="111dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="42dp"
+        android:backgroundTint="@color/Azul"
+        android:text="Registrar"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/view"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroupSexo" />
+
+    <TextView
+        android:id="@+id/volver"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:fontFamily="sans-serif-condensed"
+        android:text="Volver"
+        android:textColor="@color/Azul"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/view"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintTop_toBottomOf="@+id/registrar" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
