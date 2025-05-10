@@ -35,6 +35,7 @@
 
     </LinearLayout>
 
+
     <View
         android:id="@+id/rectangulo"
         android:layout_width="387dp"
@@ -44,6 +45,129 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/headerLayout" />
+
+    <TextView
+        android:id="@+id/perfil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:text="Perfil"
+        android:textAlignment="center"
+        android:textColor="@color/Azul"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/rectangulo"
+        app:layout_constraintStart_toStartOf="@+id/rectangulo"
+        app:layout_constraintTop_toTopOf="@+id/rectangulo" />
+
+
+    <TextView
+        android:id="@+id/nombre_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="184dp"
+        android:fontFamily="sans-serif-condensed"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textColor="@color/Azul"
+        android:textSize="17dp"
+        app:layout_constraintEnd_toEndOf="@+id/rectangulo"
+        app:layout_constraintHorizontal_bias="0.162"
+        app:layout_constraintStart_toStartOf="@+id/rectangulo"
+        app:layout_constraintTop_toBottomOf="@+id/perfil" />
+
+    <TextView
+        android:id="@+id/cambiartext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-condensed"
+        android:text="Cambiar Contraseña"
+        android:textAlignment="center"
+        android:textColor="@color/Azul"
+        android:textSize="17dp"
+        app:layout_constraintBottom_toBottomOf="@+id/rectangulo"
+        app:layout_constraintEnd_toEndOf="@+id/rectangulo"
+        app:layout_constraintHorizontal_bias="0.212"
+        app:layout_constraintStart_toStartOf="@+id/rectangulo"
+        app:layout_constraintTop_toBottomOf="@+id/nombre_user"
+        app:layout_constraintVertical_bias="0.05" />
+
+    <Button
+        android:id="@+id/btncambiar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="76dp"
+        android:backgroundTint="@color/Azul"
+        android:text="Cambiar"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/rectangulo"
+        app:layout_constraintEnd_toEndOf="@+id/rectangulo"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="@+id/rectangulo"
+        app:layout_constraintTop_toBottomOf="@+id/contraNLayout" />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/contraactual"
+        android:layout_width="284dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="sans-serif-condensed"
+        android:text=""
+        android:textColor="@color/Azul"
+        app:boxStrokeColor="@color/Azul"
+        app:cursorColor="@color/Azul"
+        app:endIconTint="@color/Azul"
+        app:hintTextColor="@color/Azul"
+        app:layout_constraintEnd_toEndOf="@+id/rectangulo"
+        app:layout_constraintHorizontal_bias="0.514"
+        app:layout_constraintStart_toStartOf="@+id/rectangulo"
+        app:layout_constraintTop_toBottomOf="@+id/cambiartext">
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editcontra"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:inputType="text"
+            android:textColor="@color/Azul"
+            android:textColorHint="@color/Azul"
+            android:textSize="20sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/contraNLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="284dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="sans-serif-condensed"
+        android:hint="Contraseña"
+        android:textColor="@color/Azul"
+        android:textColorHint="@color/Azul"
+        app:boxStrokeColor="@color/Azul"
+        app:cursorColor="@color/Azul"
+        app:endIconMode="password_toggle"
+        app:endIconTint="@color/Azul"
+        app:hintTextColor="@color/Azul"
+        app:layout_constraintEnd_toEndOf="@+id/rectangulo"
+        app:layout_constraintHorizontal_bias="0.514"
+        app:layout_constraintStart_toStartOf="@+id/rectangulo"
+        app:layout_constraintTop_toBottomOf="@+id/contraactual">
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/contra"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:inputType="textPassword"
+            android:textColor="@color/Azul"
+            android:textColorHint="@color/Azul"
+            android:textSize="20sp" />
+    </com.google.android.material.textfield.TextInputLayout>
 
     <LinearLayout
         android:id="@+id/bottomNavigationBar"
@@ -90,29 +214,9 @@
             android:contentDescription="Configuración" />
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/perfil"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="52dp"
-        android:text="Perfil"
-        android:textAlignment="center"
-        android:textColor="@color/Azul"
-        android:textSize="25dp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/rectangulo"
-        app:layout_constraintStart_toStartOf="@+id/rectangulo"
-        app:layout_constraintTop_toTopOf="@+id/rectangulo" />
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:text="TextView"
-        app:layout_constraintEnd_toEndOf="@+id/rectangulo"
-        app:layout_constraintStart_toStartOf="@+id/rectangulo"
-        app:layout_constraintTop_toBottomOf="@+id/perfil" />
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -58,17 +58,23 @@ class MainActivity : AppCompatActivity() {
         val dbHelper = SQLite(this, "usuarios", null, 1)
         val db: SQLiteDatabase = dbHelper.readableDatabase
 
-        // Consultar la base de datos para verificar usuario y contraseña
         val cursor = db.rawQuery(
             "SELECT * FROM usuarios WHERE usuario = ? AND contraseña = ?",
             arrayOf(usuarioIngresado, contraseñaIngresada)
         )
 
         if (cursor.moveToFirst()) {
-            Toast.makeText(this, "Inicio de sesión exitoso", Toast.LENGTH_SHORT).show()
+            // Guardar usuario en SharedPreferences
+            val prefs = getSharedPreferences("sesion", MODE_PRIVATE)
+            with(prefs.edit()) {
+                putString("usuarioActivo", usuarioIngresado)
+                apply()
+            }
 
+            Toast.makeText(this, "Inicio de sesión exitoso", Toast.LENGTH_SHORT).show()
             val intent = Intent(this, inicioActivity2::class.java)
             startActivity(intent)
+            finish()
         } else {
             Toast.makeText(this, "Usuario o contraseña incorrectos", Toast.LENGTH_SHORT).show()
         }

@@ -19,6 +19,7 @@ class configuracionActivity2 : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
         val imginicio = findViewById<ImageView>(R.id.inicio)
         imginicio.setOnClickListener {
             val intent = Intent(this, inicioActivity2::class.java)
@@ -59,5 +60,31 @@ class configuracionActivity2 : AppCompatActivity() {
             val intent = Intent(this, inicioActivity2::class.java)
             startActivity(intent)
         }
+        val btncerrar = findViewById<Button>(R.id.cerrarsesion)
+        btncerrar.setOnClickListener {
+            val builder = androidx.appcompat.app.AlertDialog.Builder(this)
+            builder.setTitle("Cerrar sesión")
+            builder.setMessage("¿Estás seguro de que deseas cerrar sesión?")
+
+            builder.setPositiveButton("Sí") { dialog, _ ->
+                val sharedPref = getSharedPreferences("sesion", MODE_PRIVATE)
+                with(sharedPref.edit()) {
+                    clear()
+                    apply()
+                }
+
+                val intent = Intent(this, MainActivity::class.java)
+                intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                startActivity(intent)
+                finish()
+            }
+
+            builder.setNegativeButton("Cancelar") { dialog, _ ->
+                dialog.dismiss()
+            }
+
+            builder.create().show()
+        }
+
     }
 }
