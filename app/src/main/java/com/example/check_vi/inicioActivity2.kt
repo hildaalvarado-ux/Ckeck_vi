@@ -1,9 +1,14 @@
 package com.example.check_vi
 
+import android.Manifest
 import android.content.Intent
 import android.os.Build
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.widget.*
+import androidx.activity.enableEdgeToEdge
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -12,24 +17,25 @@ import com.ingenieriajhr.blujhr.BluJhr
 
 class inicioActivity2 : AppCompatActivity() {
 
-    private lateinit var btnVincular: Button
-    private lateinit var btnDesconectar: Button
-    private lateinit var btnComenzar: Button
-
     private lateinit var blue: BluJhr
-    private var dispositivosBluetooth = ArrayList<String>()
-    private var isConnected = false  // Nueva variable para rastrear el estado de conexión
+    private var devicesBluetooth = ArrayList<String>()
+
+    private val bluetoothPermissionRequest = registerForActivityResult(
+        ActivityResultContracts.RequestMultiplePermissions()
+    ) { permissions ->
+        val granted = permissions.entries.all { it.value }
+        if (granted) {
+            blue.initializeBluetooth()
+            mostrarDispositivosBluetooth()
+        } else {
+            Toast.makeText(this, "Permisos de Bluetooth denegados", Toast.LENGTH_SHORT).show()
+        }
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-        // Habilita diseño edge-to-edge
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
-            window.setDecorFitsSystemWindows(false)
-        }
-
+        enableEdgeToEdge()
         setContentView(R.layout.activity_inicio2)
-
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
@@ -37,21 +43,22 @@ class inicioActivity2 : AppCompatActivity() {
             insets
         }
 
-
-        // Botones de conexión
-        btnVincular = findViewById(R.id.Vincular)
-        btnDesconectar = findViewById(R.id.desconectar)
-        btnComenzar = findViewById(R.id.Comenzar)
-
         blue = BluJhr(this)
         blue.onBluetooth()
 
+        val btnVincular = findViewById<Button>(R.id.Vincular)
         btnVincular.setOnClickListener {
-            blue.initializeBluetooth()
-        }
-
-        btnDesconectar.setOnClickListener {
-            desconectarBluetooth()
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+                bluetoothPermissionRequest.launch(
+                    arrayOf(
+                        Manifest.permission.BLUETOOTH_CONNECT,
+                        Manifest.permission.BLUETOOTH_SCAN
+                    )
+                )
+            } else {
+                blue.initializeBluetooth()
+                mostrarDispositivosBluetooth()
+            }
         }
 
         // Navegación
@@ -76,81 +83,69 @@ class inicioActivity2 : AppCompatActivity() {
         }
     }
 
-    private fun mostrarDispositivos() {
-        dispositivosBluetooth = blue.deviceBluetooth()
+    private fun mostrarDispositivosBluetooth() {
+        devicesBluetooth = blue.deviceBluetooth()
 
-        if (dispositivosBluetooth.isEmpty()) {
-            Toast.makeText(this, "No hay dispositivos disponibles", Toast.LENGTH_SHORT).show()
-            return
-        }
+        if (devicesBluetooth.isNotEmpty()) {
+            val builder = AlertDialog.Builder(this)
+            builder.setTitle("Selecciona un dispositivo")
 
-        val builder = AlertDialog.Builder(this)
-        builder.setTitle("Selecciona un dispositivo")
-        builder.setItems(dispositivosBluetooth.toTypedArray()) { _, which ->
-            conectarDispositivo(dispositivosBluetooth[which])
+            val devicesArray = devicesBluetooth.toTypedArray()
+            builder.setItems(devicesArray) { _, which ->
+                val selected = devicesBluetooth[which]
+                val parts = selected.split("\n")
+                if (parts.size == 2) {
+                    val macAddress = parts[1]
+                    conectarDispositivo(macAddress)
+                } else {
+                    Toast.makeText(this, "Formato de dispositivo no válido", Toast.LENGTH_SHORT).show()
+                }
+            }
+
+            builder.setNegativeButton("Cancelar", null)
+            builder.show()
+        } else {
+            Toast.makeText(this, "No hay dispositivos vinculados", Toast.LENGTH_SHORT).show()
         }
-        builder.setCancelable(true)
-        builder.show()
     }
 
-    private fun conectarDispositivo(dispositivo: String) {
-        blue.connect(dispositivo)
+    private fun conectarDispositivo(macAddress: String) {
+        blue.connect(macAddress)
+
         blue.setDataLoadFinishedListener(object : BluJhr.ConnectedBluetooth {
             override fun onConnectState(state: BluJhr.Connected) {
                 when (state) {
-                    BluJhr.Connected.True -> {
-                        isConnected = true
-                        Toast.makeText(applicationContext, "Conexión Exitosa", Toast.LENGTH_SHORT).show()
+                    BluJhr.Connected.Pending -> {
+                        Toast.makeText(applicationContext, "Conexión pendiente...", Toast.LENGTH_SHORT).show()
                     }
+                    BluJhr.Connected.True -> {
+                        Toast.makeText(applicationContext, "¡Conectado!", Toast.LENGTH_SHORT).show()
+                        Handler(Looper.getMainLooper()).postDelayed({
+                            val enviado = blue.bluTx("Hola\n")
+                            if (!enviado) {
+                                Toast.makeText(applicationContext, "No se pudo enviar el mensaje", Toast.LENGTH_SHORT).show()
+                            } else {
+                                Toast.makeText(applicationContext, "Mensaje enviado", Toast.LENGTH_SHORT).show()
+                            }
+                        }, 1000) // Esperar 1 segundo después de conectarse
+                    }
+
                     BluJhr.Connected.False -> {
-                        isConnected = false
                         Toast.makeText(applicationContext, "No se pudo conectar", Toast.LENGTH_SHORT).show()
                     }
                     BluJhr.Connected.Disconnect -> {
-                        isConnected = false
                         Toast.makeText(applicationContext, "Desconectado", Toast.LENGTH_SHORT).show()
                     }
-                    else -> {}
                 }
             }
         })
-    }
-
-    private fun desconectarBluetooth() {
-        if (isConnected) {
-            AlertDialog.Builder(this)
-                .setTitle("¿Seguro que deseas desconectarte?")
-                .setMessage("Se cerrará la conexión Bluetooth actual.")
-                .setPositiveButton("Sí") { _, _ ->
-                    blue.closeConnection()
-                    isConnected = false
-                    Toast.makeText(this, "Desconectado", Toast.LENGTH_SHORT).show()
-                }
-                .setNegativeButton("No", null)
-                .show()
-        } else {
-            Toast.makeText(this, "No hay conexión Bluetooth establecida", Toast.LENGTH_SHORT).show()
-        }
-    }
-
-    override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
-        if (blue.checkPermissions(requestCode, grantResults)) {
-            blue.initializeBluetooth()
-        } else {
-            if (Build.VERSION.SDK_INT < Build.VERSION_CODES.S) {
-                blue.initializeBluetooth()
-            } else {
-                Toast.makeText(this, "Permisos denegados", Toast.LENGTH_SHORT).show()
-            }
-        }
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         if (!blue.stateBluetoooth() && requestCode == 100) {
             blue.initializeBluetooth()
         } else if (requestCode == 100) {
-            mostrarDispositivos()
+            devicesBluetooth = blue.deviceBluetooth()
         }
         super.onActivityResult(requestCode, resultCode, data)
     }

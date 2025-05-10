@@ -8,4 +8,101 @@
     android:layout_height="match_parent"
     tools:context=".preguntasActivity2">
 
-  </androidx.constraintlayout.widget.ConstraintLayout>
+  <LinearLayout
+      android:id="@+id/headerLayout"
+      android:layout_width="0dp"
+      android:layout_height="60dp"
+      android:orientation="horizontal"
+      android:background="#1B485B"
+      android:padding="8dp"
+      android:gravity="center_vertical"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent">
+
+    <!-- Botón Volver (izquierda) -->
+    <ImageView
+        android:id="@+id/volver"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:padding="9dp"
+        android:layout_weight="1"
+        android:clickable="true"
+        android:focusable="true"
+        android:scaleType="fitStart"
+        android:contentDescription="Volver"
+
+        android:src="@drawable/arrow_left_circle_fill" />
+
+    <!-- Botón Usuario (derecha) -->
+    <ImageView
+        android:id="@+id/userButton"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:padding="9dp"
+        android:layout_weight="1"
+        android:clickable="true"
+        android:focusable="true"
+        android:scaleType="fitEnd"
+        android:contentDescription="Botón de usuario"
+        android:src="@drawable/icono_user"
+        android:layout_gravity="end|center_vertical" />
+  </LinearLayout>
+
+  <View
+      android:id="@+id/rectangulo"
+      android:layout_width="387dp"
+      android:layout_height="673dp"
+      android:background="@drawable/rectangulo"
+      app:layout_constraintBottom_toTopOf="@+id/bottomNavigationBar"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/headerLayout" />
+
+  <LinearLayout
+      android:id="@+id/bottomNavigationBar"
+      android:layout_width="0dp"
+      android:layout_height="60dp"
+      android:orientation="horizontal"
+      android:background="#1B485B"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      android:gravity="center">
+
+    <ImageView
+        android:id="@+id/inicio"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:padding="9dp"
+        android:layout_weight="1"
+        android:src="@drawable/icono_house"
+        android:clickable="true"
+        android:focusable="true"
+        android:contentDescription="Inicio" />
+
+    <ImageView
+        android:id="@+id/historial"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:padding="9dp"
+        android:layout_weight="1"
+        android:src="@drawable/icono_favorite"
+        android:clickable="true"
+        android:focusable="true"
+        android:contentDescription="Agregar" />
+
+    <ImageView
+        android:id="@+id/configuracion"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:padding="9dp"
+        android:layout_weight="1"
+        android:src="@drawable/icono_setting"
+        android:clickable="true"
+        android:focusable="true"
+        android:contentDescription="Configuración" />
+  </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
