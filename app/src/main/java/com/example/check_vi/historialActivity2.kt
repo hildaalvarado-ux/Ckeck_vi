@@ -1,14 +1,21 @@
 package com.example.check_vi
 
 import android.content.Intent
+import android.database.sqlite.SQLiteDatabase
 import android.os.Bundle
 import android.widget.ImageView
+import android.widget.TextView
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
 class historialActivity2 : AppCompatActivity() {
+    private lateinit var dbHelper: SQLite
+    private lateinit var db: SQLiteDatabase
+    private lateinit var nombreUser: TextView
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -18,30 +25,37 @@ class historialActivity2 : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        val imginicio = findViewById<ImageView>(R.id.inicio)
-        imginicio.setOnClickListener {
-            val intent = Intent(this, inicioActivity2::class.java)
-            startActivity(intent)
+
+        nombreUser = findViewById(R.id.nombre_user)
+
+        val prefs = getSharedPreferences("sesion", MODE_PRIVATE)
+        val usuarioActivo = prefs.getString("usuarioActivo", null)
+
+        if (usuarioActivo == null) {
+            Toast.makeText(this, "No hay usuario logueado", Toast.LENGTH_SHORT).show()
+            startActivity(Intent(this, MainActivity::class.java))
+            finish()
+            return
         }
-        val imghistorial = findViewById<ImageView>(R.id.historial)
-        imghistorial.setOnClickListener {
-            val intent = Intent(this, historialActivity2::class.java)
-            startActivity(intent)
+
+        // Mostrar directamente el nombre del usuario
+        nombreUser.text = usuarioActivo
+
+        // --- Navegación ---
+        findViewById<ImageView>(R.id.inicio).setOnClickListener {
+            startActivity(Intent(this, inicioActivity2::class.java))
         }
-        val imgconfiguracion = findViewById<ImageView>(R.id.configuracion)
-        imgconfiguracion.setOnClickListener {
-            val intent = Intent(this, configuracionActivity2::class.java)
-            startActivity(intent)
+        findViewById<ImageView>(R.id.historial).setOnClickListener {
+            startActivity(Intent(this, historialActivity2::class.java))
         }
-        val imgperfil = findViewById<ImageView>(R.id.userButton)
-        imgperfil.setOnClickListener {
-            val intent = Intent(this, perfilActivity2::class.java)
-            startActivity(intent)
+        findViewById<ImageView>(R.id.configuracion).setOnClickListener {
+            startActivity(Intent(this, configuracionActivity2::class.java))
         }
-        val imgvolver = findViewById<ImageView>(R.id.volver)
-        imgvolver.setOnClickListener {
-            val intent = Intent(this, inicioActivity2::class.java)
-            startActivity(intent)
+        findViewById<ImageView>(R.id.userButton).setOnClickListener {
+            startActivity(Intent(this, perfilActivity2::class.java))
+        }
+        findViewById<ImageView>(R.id.volver).setOnClickListener {
+            startActivity(Intent(this, inicioActivity2::class.java))
         }
     }
 }

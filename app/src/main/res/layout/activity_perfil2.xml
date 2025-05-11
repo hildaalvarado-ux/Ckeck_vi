@@ -36,6 +36,7 @@
     </LinearLayout>
 
 
+
     <View
         android:id="@+id/rectangulo"
         android:layout_width="387dp"
@@ -65,16 +66,16 @@
         android:id="@+id/nombre_user"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="184dp"
+        android:layout_marginTop="48dp"
         android:fontFamily="sans-serif-condensed"
-        android:text="TextView"
+        android:text="text"
         android:textAlignment="center"
         android:textColor="@color/Azul"
-        android:textSize="17dp"
+        android:textSize="25dp"
         app:layout_constraintEnd_toEndOf="@+id/rectangulo"
-        app:layout_constraintHorizontal_bias="0.162"
+        app:layout_constraintHorizontal_bias="0.151"
         app:layout_constraintStart_toStartOf="@+id/rectangulo"
-        app:layout_constraintTop_toBottomOf="@+id/perfil" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView5" />
 
     <TextView
         android:id="@+id/cambiartext"
@@ -84,13 +85,13 @@
         android:text="Cambiar Contraseña"
         android:textAlignment="center"
         android:textColor="@color/Azul"
-        android:textSize="17dp"
+        android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="@+id/rectangulo"
         app:layout_constraintEnd_toEndOf="@+id/rectangulo"
-        app:layout_constraintHorizontal_bias="0.212"
+        app:layout_constraintHorizontal_bias="0.225"
         app:layout_constraintStart_toStartOf="@+id/rectangulo"
         app:layout_constraintTop_toBottomOf="@+id/nombre_user"
-        app:layout_constraintVertical_bias="0.05" />
+        app:layout_constraintVertical_bias="0.042" />
 
     <Button
         android:id="@+id/btncambiar"
@@ -98,6 +99,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="76dp"
         android:backgroundTint="@color/Azul"
+        android:fontFamily="sans-serif-condensed"
         android:text="Cambiar"
         android:textColor="@color/white"
         android:textSize="20dp"
@@ -105,7 +107,7 @@
         app:layout_constraintEnd_toEndOf="@+id/rectangulo"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="@+id/rectangulo"
-        app:layout_constraintTop_toBottomOf="@+id/contraNLayout" />
+        app:layout_constraintTop_toBottomOf="@+id/nuevacontra" />
 
 
     <com.google.android.material.textfield.TextInputLayout
@@ -114,7 +116,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:fontFamily="sans-serif-condensed"
-        android:text=""
+        android:text="contra "
         android:textColor="@color/Azul"
         app:boxStrokeColor="@color/Azul"
         app:cursorColor="@color/Azul"
@@ -127,7 +129,7 @@
 
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/editcontra"
+            android:id="@+id/contraseñaactual"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-condensed"
@@ -138,7 +140,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/contraNLayout"
+        android:id="@+id/nuevacontra"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="284dp"
         android:layout_height="wrap_content"
@@ -159,7 +161,7 @@
 
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/contra"
+            android:id="@+id/contraN"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-condensed"
@@ -214,9 +216,16 @@
             android:contentDescription="Configuración" />
     </LinearLayout>
 
-
-
-
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        app:layout_constraintEnd_toEndOf="@+id/rectangulo"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="@+id/rectangulo"
+        app:layout_constraintTop_toBottomOf="@+id/perfil"
+        tools:srcCompat="@tools:sample/avatars" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

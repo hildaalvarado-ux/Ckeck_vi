@@ -34,13 +34,6 @@ class inicioActivity2 : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val prefs = getSharedPreferences("sesion", MODE_PRIVATE)
-        val usuarioActivo = prefs.getString("usuarioActivo", null)
-        if (usuarioActivo != null) {
-            val intent = Intent(this, inicioActivity2::class.java)
-            startActivity(intent)
-            finish()
-        }
 
         enableEdgeToEdge()
         setContentView(R.layout.activity_inicio2)

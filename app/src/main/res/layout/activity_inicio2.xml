@@ -39,8 +39,8 @@
 
     <View
         android:id="@+id/rectangulo"
-        android:layout_width="387dp"
-        android:layout_height="673dp"
+        android:layout_width="329dp"
+        android:layout_height="571dp"
         android:background="@drawable/rectangulo_azul"
         app:layout_constraintBottom_toTopOf="@+id/bottomNavigationBar"
         app:layout_constraintEnd_toEndOf="parent"
@@ -49,21 +49,19 @@
         app:layout_constraintTop_toBottomOf="@+id/headerLayout" />
 
 
-
     <Button
         android:id="@+id/ver"
         android:layout_width="145dp"
         android:layout_height="49dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="8dp"
         android:backgroundTint="@color/marino"
         android:text="ver"
         android:textColor="@color/Azul"
         android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="@+id/rectangulo"
-        app:layout_constraintHorizontal_bias="0.468"
+        app:layout_constraintHorizontal_bias="0.456"
         app:layout_constraintStart_toStartOf="@+id/rectangulo"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
-
 
     <TextView
         android:id="@+id/bienvenido"
@@ -82,15 +80,14 @@
 
     <TextView
         android:id="@+id/texto"
-        android:layout_width="373dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="40dp"
+        android:layout_width="301dp"
+        android:layout_height="85dp"
+        android:layout_marginTop="36dp"
         android:text="Tu bienestar es lo más importante. Monitorea y cuida tu salud cada día."
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="@+id/rectangulo"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/rectangulo"
         app:layout_constraintTop_toBottomOf="@+id/bienvenido" />
 
@@ -98,20 +95,19 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="8dp"
         android:text="Pasos para el uso de aplicacion"
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="@+id/rectangulo"
-        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="@+id/rectangulo"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="221dp"
+        android:layout_height="53dp"
         android:layout_marginTop="28dp"
         app:layout_constraintEnd_toEndOf="@+id/rectangulo"
         app:layout_constraintHorizontal_bias="0.503"
@@ -124,13 +120,13 @@
         android:id="@+id/Vincular"
         android:layout_width="145dp"
         android:layout_height="49dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="8dp"
         android:backgroundTint="@color/marino"
         android:text="Vincular"
         android:textColor="@color/Azul"
         android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="@+id/rectangulo"
-        app:layout_constraintHorizontal_bias="0.463"
+        app:layout_constraintHorizontal_bias="0.461"
         app:layout_constraintStart_toStartOf="@+id/rectangulo"
         app:layout_constraintTop_toBottomOf="@+id/ver" />
 
@@ -153,13 +149,13 @@
         android:id="@+id/Comenzar"
         android:layout_width="145dp"
         android:layout_height="49dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="12dp"
         android:backgroundTint="@color/marino"
         android:text="Comenzar"
         android:textColor="@color/Azul"
         android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="@+id/rectangulo"
-        app:layout_constraintHorizontal_bias="0.463"
+        app:layout_constraintHorizontal_bias="0.461"
         app:layout_constraintStart_toStartOf="@+id/rectangulo"
         app:layout_constraintTop_toBottomOf="@+id/Vincular" />
 
