@@ -19,10 +19,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Check_Vi"
         tools:targetApi="31">
-        <service
-            android:name=".MyService"
-            android:enabled="true"
-            android:exported="true"></service>
+        <activity
+            android:name=".ResultadosActivity"
+            android:exported="false" />
 
         <activity
             android:name=".preguntasActivity2"

@@ -82,6 +82,9 @@ class inicioActivity2 : AppCompatActivity() {
         findViewById<ImageView>(R.id.userButton).setOnClickListener {
             startActivity(Intent(this, perfilActivity2::class.java))
         }
+        findViewById<Button>(R.id.Comenzar).setOnClickListener {
+            startActivity(Intent(this, ResultadosActivity::class.java))
+        }
     }
 
     private fun mostrarDispositivosBluetooth() {
