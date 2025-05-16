@@ -39,8 +39,8 @@
 
     <View
         android:id="@+id/rectangulo"
-        android:layout_width="329dp"
-        android:layout_height="571dp"
+        android:layout_width="387dp"
+        android:layout_height="673dp"
         android:background="@drawable/rectangulo_azul"
         app:layout_constraintBottom_toTopOf="@+id/bottomNavigationBar"
         app:layout_constraintEnd_toEndOf="parent"
@@ -51,15 +51,15 @@
 
     <Button
         android:id="@+id/ver"
-        android:layout_width="145dp"
-        android:layout_height="49dp"
-        android:layout_marginTop="8dp"
+        android:layout_width="149dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="12dp"
         android:backgroundTint="@color/marino"
+        android:fontFamily="sans-serif-condensed"
         android:text="ver"
         android:textColor="@color/Azul"
-        android:textSize="20dp"
+        android:textSize="25dp"
         app:layout_constraintEnd_toEndOf="@+id/rectangulo"
-        app:layout_constraintHorizontal_bias="0.456"
         app:layout_constraintStart_toStartOf="@+id/rectangulo"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
@@ -70,8 +70,9 @@
         android:layout_marginTop="40dp"
         android:text="Bienvenido"
         android:textAlignment="center"
+        android:fontFamily="sans-serif-condensed"
         android:textColor="@color/white"
-        android:textSize="25dp"
+        android:textSize="27dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/rectangulo"
         app:layout_constraintHorizontal_bias="0.456"
@@ -81,12 +82,13 @@
     <TextView
         android:id="@+id/texto"
         android:layout_width="301dp"
-        android:layout_height="85dp"
-        android:layout_marginTop="36dp"
+        android:layout_height="106dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="sans-serif-condensed"
         android:text="Tu bienestar es lo más importante. Monitorea y cuida tu salud cada día."
         android:textAlignment="center"
         android:textColor="@color/white"
-        android:textSize="20dp"
+        android:textSize="25dp"
         app:layout_constraintEnd_toEndOf="@+id/rectangulo"
         app:layout_constraintStart_toStartOf="@+id/rectangulo"
         app:layout_constraintTop_toBottomOf="@+id/bienvenido" />
@@ -96,10 +98,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
+        android:fontFamily="sans-serif-condensed"
         android:text="Pasos para el uso de aplicacion"
         android:textAlignment="center"
         android:textColor="@color/white"
-        android:textSize="20dp"
+        android:textSize="25dp"
         app:layout_constraintEnd_toEndOf="@+id/rectangulo"
         app:layout_constraintStart_toStartOf="@+id/rectangulo"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
@@ -118,44 +121,46 @@
 
     <Button
         android:id="@+id/Vincular"
-        android:layout_width="145dp"
-        android:layout_height="49dp"
-        android:layout_marginTop="8dp"
+        android:layout_width="149dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="12dp"
         android:backgroundTint="@color/marino"
+        android:fontFamily="sans-serif-condensed"
         android:text="Vincular"
         android:textColor="@color/Azul"
-        android:textSize="20dp"
+        android:textSize="25dp"
         app:layout_constraintEnd_toEndOf="@+id/rectangulo"
-        app:layout_constraintHorizontal_bias="0.461"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="@+id/rectangulo"
         app:layout_constraintTop_toBottomOf="@+id/ver" />
 
     <Button
         android:id="@+id/desconectar"
-        android:layout_width="145dp"
-        android:layout_height="49dp"
+        android:layout_width="176dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="12dp"
         android:backgroundTint="@color/marino"
+        android:fontFamily="sans-serif-condensed"
         android:text="Desconectar"
         android:textColor="@color/Azul"
-        android:textSize="20dp"
+        android:textSize="25dp"
         app:layout_constraintBottom_toBottomOf="@+id/rectangulo"
         app:layout_constraintEnd_toEndOf="@+id/rectangulo"
-        app:layout_constraintHorizontal_bias="0.466"
         app:layout_constraintStart_toStartOf="@+id/rectangulo"
         app:layout_constraintTop_toBottomOf="@+id/Comenzar"
-        app:layout_constraintVertical_bias="0.345" />
+        app:layout_constraintVertical_bias="0.116" />
 
     <Button
         android:id="@+id/Comenzar"
-        android:layout_width="145dp"
-        android:layout_height="49dp"
+        android:layout_width="149dp"
+        android:layout_height="53dp"
         android:layout_marginTop="12dp"
         android:backgroundTint="@color/marino"
+        android:fontFamily="sans-serif-condensed"
         android:text="Comenzar"
         android:textColor="@color/Azul"
-        android:textSize="20dp"
+        android:textSize="25dp"
         app:layout_constraintEnd_toEndOf="@+id/rectangulo"
-        app:layout_constraintHorizontal_bias="0.461"
         app:layout_constraintStart_toStartOf="@+id/rectangulo"
         app:layout_constraintTop_toBottomOf="@+id/Vincular" />
 

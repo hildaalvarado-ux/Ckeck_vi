@@ -54,8 +54,9 @@
         android:layout_marginTop="52dp"
         android:text="Perfil"
         android:textAlignment="center"
+        android:fontFamily="sans-serif-condensed"
         android:textColor="@color/Azul"
-        android:textSize="25dp"
+        android:textSize="27dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/rectangulo"
         app:layout_constraintStart_toStartOf="@+id/rectangulo"
@@ -85,7 +86,7 @@
         android:text="Cambiar Contraseña"
         android:textAlignment="center"
         android:textColor="@color/Azul"
-        android:textSize="20dp"
+        android:textSize="22dp"
         app:layout_constraintBottom_toBottomOf="@+id/rectangulo"
         app:layout_constraintEnd_toEndOf="@+id/rectangulo"
         app:layout_constraintHorizontal_bias="0.225"
@@ -93,22 +94,22 @@
         app:layout_constraintTop_toBottomOf="@+id/nombre_user"
         app:layout_constraintVertical_bias="0.042" />
 
+
     <Button
         android:id="@+id/btncambiar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="76dp"
+
+        android:layout_width="171dp"
+        android:layout_height="56dp"
         android:backgroundTint="@color/Azul"
         android:fontFamily="sans-serif-condensed"
         android:text="Cambiar"
         android:textColor="@color/white"
-        android:textSize="20dp"
+        android:textSize="25dp"
         app:layout_constraintBottom_toBottomOf="@+id/rectangulo"
         app:layout_constraintEnd_toEndOf="@+id/rectangulo"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="@+id/rectangulo"
-        app:layout_constraintTop_toBottomOf="@+id/nuevacontra" />
-
+        app:layout_constraintTop_toBottomOf="@+id/nuevacontra"
+        app:layout_constraintVertical_bias="0.283" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/contraactual"
@@ -136,7 +137,7 @@
             android:inputType="text"
             android:textColor="@color/Azul"
             android:textColorHint="@color/Azul"
-            android:textSize="20sp" />
+            android:textSize="25sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -168,7 +169,7 @@
             android:inputType="textPassword"
             android:textColor="@color/Azul"
             android:textColorHint="@color/Azul"
-            android:textSize="20sp" />
+            android:textSize="25sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <LinearLayout

@@ -64,9 +64,11 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="52dp"
         android:text="Historial"
+
         android:textAlignment="center"
         android:textColor="@color/Azul"
-        android:textSize="25dp"
+        android:fontFamily="sans-serif-condensed"
+        android:textSize="27dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/rectangulo"
         app:layout_constraintStart_toStartOf="@+id/rectangulo"
