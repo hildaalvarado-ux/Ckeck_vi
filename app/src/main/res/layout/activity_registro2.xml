@@ -7,47 +7,42 @@
     android:layout_height="match_parent"
     android:background="@color/marino"
     tools:context=".RegistroActivity2">
-
+    <View
+        android:id="@+id/view2"
+        android:layout_width="418dp"
+        android:layout_height="870dp"
+        android:background="@color/marino"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.533"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.275" />
 
     <View
         android:id="@+id/view"
-        android:layout_width="347dp"
-        android:layout_height="554dp"
-
+        android:layout_width="350dp"
+        android:layout_height="581dp"
         android:background="@drawable/rectangulo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.578" />
-
-    <ImageView
-        android:id="@+id/logo"
-        android:layout_width="156dp"
-        android:layout_height="117dp"
-        android:layout_marginStart="98dp"
-        android:layout_marginTop="112dp"
-        android:layout_marginEnd="100dp"
-        app:layout_constraintEnd_toEndOf="@+id/view"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/view"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/redondo_logo" />
-
+        app:layout_constraintVertical_bias="0.46" />
 
     <TextView
         android:id="@+id/datos"
-        android:layout_width="192dp"
-        android:layout_height="37dp"
-        android:layout_marginStart="80dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="27dp"
+        android:layout_width="218dp"
+        android:layout_height="42dp"
+
+        android:layout_marginTop="24dp"
         android:fontFamily="sans-serif-condensed"
         android:text="Ingresa tus datos"
         android:textColor="@color/Azul"
-        android:textSize="25dp"
+        android:textSize="27dp"
         app:layout_constraintEnd_toEndOf="@+id/view"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="@+id/view"
         app:layout_constraintTop_toBottomOf="@+id/logo" />
 
@@ -57,7 +52,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
         android:fontFamily="sans-serif-condensed"
-        android:hint="Crea un nombre de usuario"
+        android:hint="Crea un usuario"
         android:textColor="@color/Azul"
         android:textColorHint="@color/Azul"
         app:boxStrokeColor="@color/Azul"
@@ -78,7 +73,7 @@
             android:inputType="text"
             android:textColor="@color/Azul"
             android:textColorHint="@color/Azul"
-            android:textSize="20sp" />
+            android:textSize="22sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -110,7 +105,7 @@
             android:inputType="textPassword"
             android:textColor="@color/Azul"
             android:textColorHint="@color/Azul"
-            android:textSize="20sp" />
+            android:textSize="22sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -140,7 +135,7 @@
             android:inputType="text"
             android:textColor="@color/Azul"
             android:textColorHint="@color/Azul"
-            android:textSize="20sp" />
+            android:textSize="22sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <RadioGroup
@@ -154,19 +149,19 @@
 
         <RadioButton
             android:id="@+id/radioMasculino"
-            android:layout_width="126dp"
+            android:layout_width="138dp"
             android:layout_height="match_parent"
             android:text="Masculino"
             android:textColor="@color/Azul"
-            android:textSize="18dp" />
+            android:textSize="22dp" />
 
         <RadioButton
             android:id="@+id/radioFemenino"
-            android:layout_width="126dp"
+            android:layout_width="138dp"
             android:layout_height="match_parent"
             android:text="Femenino"
             android:textColor="@color/Azul"
-            android:textSize="18dp" />
+            android:textSize="22dp" />
 
     </RadioGroup>
 
@@ -180,7 +175,7 @@
         android:backgroundTint="@color/Azul"
         android:text="Registrar"
         android:textColor="@color/white"
-        android:textSize="20dp"
+        android:textSize="23dp"
         app:layout_constraintEnd_toEndOf="@+id/view"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/view"
@@ -190,19 +185,30 @@
         android:id="@+id/volver"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="16dp"
         android:clickable="true"
         android:focusable="true"
         android:fontFamily="sans-serif-condensed"
         android:text="Volver"
         android:textColor="@color/Azul"
-        android:textSize="20sp"
+        android:textSize="23sp"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
         app:layout_constraintEnd_toEndOf="@+id/view"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="@+id/view"
-        app:layout_constraintTop_toBottomOf="@+id/registrar" />
+        app:layout_constraintTop_toBottomOf="@+id/registrar"
+        app:layout_constraintVertical_bias="0.0" />
 
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="156dp"
+        android:layout_height="117dp"
 
+        android:layout_marginTop="76dp"
+        app:layout_constraintEnd_toEndOf="@+id/view"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/redondo_logo" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
