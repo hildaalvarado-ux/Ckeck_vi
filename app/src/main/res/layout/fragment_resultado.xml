@@ -31,7 +31,7 @@
                 android:text="Resultados"
                 android:textAlignment="center"
                 android:textColor="@color/Azul"
-                android:textSize="25dp"
+                android:textSize="27dp"
                 android:textStyle="bold"
                 android:fontFamily="sans-serif-condensed" />
 
@@ -51,10 +51,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:backgroundTint="@color/Azul"
                 android:text="Normal"
-                android:textColor="@color/white"
+                android:backgroundTint="@color/marino"
                 android:textSize="20dp"
+                android:textColor="@color/black"
                 android:fontFamily="sans-serif-condensed" />
 
             <TextView
@@ -73,22 +73,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:backgroundTint="@color/Azul"
+                android:backgroundTint="@color/marino"
                 android:text="Normal"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:textSize="20dp"
                 android:fontFamily="sans-serif-condensed" />
 
-            <Button
-                android:id="@+id/Recomendacion"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="36dp"
-                android:backgroundTint="@color/Azul"
-                android:text="Ver Recomendaciones"
-                android:textColor="@color/white"
-                android:textSize="20dp"
-                android:fontFamily="sans-serif-condensed" />
+
 
             <Button
                 android:id="@+id/historial"
@@ -109,7 +100,7 @@
                 android:text="Los valores mostrados en la medición de signos vitales son aproximados y pueden tener un pequeño margen de error. Para un diagnóstico preciso, se recomienda consultar a un profesional de la salud."
                 android:textAlignment="center"
                 android:textColor="@color/Azul"
-                android:textSize="19dp"
+                android:textSize="22dp"
                 android:fontFamily="sans-serif-condensed" />
 
         </LinearLayout>

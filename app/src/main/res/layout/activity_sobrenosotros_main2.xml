@@ -87,7 +87,7 @@
                 android:fontFamily="sans-serif-condensed"
                 android:textAlignment="center"
                 android:textColor="@color/Azul"
-                android:textSize="25dp"
+                android:textSize="27dp"
                 android:textStyle="bold" />
 
             <!-- Subtítulo -->
@@ -99,8 +99,9 @@
                 android:text="¡Bienvenido a Check Vi! "
                 android:fontFamily="sans-serif-condensed"
                 android:textAlignment="center"
-                android:textColor="@color/Azul"
-                android:textSize="25dp" />
+                android:textColor="@color/material_dynamic_neutral30"
+                android:textSize="25dp"
+                android:textStyle="bold"/>
 
             <!-- Texto desplazable -->
             <TextView
@@ -110,9 +111,62 @@
                 android:fontFamily="sans-serif-condensed"
                 android:lineSpacingExtra="4dp"
                 android:layout_marginTop="24dp"
-                android:text="El objetivo de la aplicación es ofrecer una herramienta para monitorear y registrar signos vitales, como la temperatura corporal y la presión arterial. Además, proporcionará recomendaciones de salud personalizadas y un historial, permitiendo a los usuarios hacer un seguimiento continuo de su bienestar.\n\nNuestra misión: Queremos que más personas puedan cuidar su salud. Por eso creamos una app simple y útil, que te ayudara a estar pendiente del control en tus signos vitales.\n\nNuestro equipo: Somos un grupo de estudiantes comprometidas con la tecnología que han unido sus habilidades para el desarrollo de esta aplicación.\n\n¡Esperamos que disfrutes tanto usándola como nosotras disfrutamos creándola!\n\n¡Gracias por ser parte de Check Vi!\nSi tienes alguna sugerencia o quieres compartir tu experiencia, no dudes en contactarnos."
+                android:text="El objetivo de la aplicación es ofrecer una herramienta para monitorear y registrar signos vitales, como la temperatura corporal y la presión arterial. Además, proporcionará recomendaciones de salud personalizadas y un historial, permitiendo a los usuarios hacer un seguimiento continuo de su bienestar."
                 android:textColor="@color/Azul"
-                android:textSize="20dp" />
+                android:textSize="22dp" />
+
+            <TextView
+                android:id="@+id/text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Nuestra misión"
+                android:fontFamily="sans-serif-condensed"
+                android:textAlignment="center"
+                android:textColor="@color/Azul"
+                android:textSize="27dp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/textomision"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed"
+                android:lineSpacingExtra="4dp"
+                android:layout_marginTop="24dp"
+                android:text="Queremos que más personas puedan cuidar su salud. Por eso creamos una app simple y útil, que te ayudara a estar pendiente del control en tus signos vitales."
+                android:textColor="@color/Azul"
+                android:textSize="22dp" />
+            <TextView
+                android:id="@+id/textvision"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Nuestro Equipo"
+                android:fontFamily="sans-serif-condensed"
+                android:textAlignment="center"
+                android:textColor="@color/Azul"
+                android:textSize="27dp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/textovision"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed"
+                android:lineSpacingExtra="4dp"
+                android:layout_marginTop="24dp"
+                android:text="Somos un grupo de estudiantes comprometidas con la tecnología que han unido sus habilidades para el desarrollo de esta aplicación."
+                android:textColor="@color/Azul"
+                android:textSize="22dp" />
+            <TextView
+                android:id="@+id/textoIn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed"
+                android:lineSpacingExtra="4dp"
+                android:layout_marginTop="24dp"
+                android:text="Esperamos que disfrutes tanto usándola como nosotras disfrutamos creándola!\n\n¡Gracias por ser parte de Check Vi!\nSi tienes alguna sugerencia o quieres compartir tu experiencia, no dudes en contactarnos."
+                android:textColor="@color/Azul"
+                android:textSize="22dp" />
         </LinearLayout>
     </ScrollView>
 
