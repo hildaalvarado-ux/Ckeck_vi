@@ -54,7 +54,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
-        android:text="configuración"
+        android:text="Configuración"
         android:fontFamily="sans-serif-condensed"
         android:textAlignment="center"
         android:textColor="@color/Azul"
@@ -226,5 +226,17 @@
         app:layout_constraintTop_toBottomOf="@+id/sobrenosotros"
         app:layout_constraintVertical_bias="0.482"
         app:srcCompat="@drawable/question_circle" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="38dp"
+        android:layout_height="38dp"
+        app:layout_constraintBottom_toBottomOf="@+id/cerrarsesion"
+        app:layout_constraintEnd_toEndOf="@+id/cerrarsesion"
+        app:layout_constraintHorizontal_bias="0.053"
+        app:layout_constraintStart_toStartOf="@+id/cerrarsesion"
+        app:layout_constraintTop_toBottomOf="@+id/preguntas"
+        app:layout_constraintVertical_bias="0.551"
+        app:srcCompat="@drawable/ico_cerrarsesion" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
