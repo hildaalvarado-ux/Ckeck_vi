@@ -154,7 +154,7 @@
               android:id="@+id/titleTextView2"
               android:layout_width="match_parent"
               android:layout_height="wrap_content"
-              android:text="¿La app guarda automáticamente mis datos o tengo que hacer algo?"
+              android:text="¿Qué significan los valores de presión arterial sistólica y diastólica?"
               android:textColor="@color/Azul"
               android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
 
@@ -165,7 +165,7 @@
               android:layout_margin="25dp"
               android:textStyle="bold|italic"
               android:textSize="19dp"
-              android:text="Sí, la app guarda automáticamente tus mediciones y las organiza para que puedas consultarlas en cualquier momento."
+              android:text="La presión sistólica es la presión cuando el corazón late. La diastólica es la presión cuando el corazón está en reposo entre latidos."
               android:textColor="@color/Azul"
               android:textAppearance="@style/TextAppearance.AppCompat.Small"/>
 
@@ -201,7 +201,7 @@
               android:id="@+id/titleTextView3"
               android:layout_width="match_parent"
               android:layout_height="wrap_content"
-              android:text="¿La app guarda automáticamente mis datos o tengo que hacer algo?"
+              android:text="¿Cuál es una temperatura corporal normal, y cuándo se considera fiebre o hipotermia?"
               android:textColor="@color/white"
               android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
 
@@ -212,7 +212,7 @@
               android:layout_margin="25dp"
               android:textStyle="bold|italic"
               android:textSize="19dp"
-              android:text="Sí, la app guarda automáticamente tus mediciones y las organiza para que puedas consultarlas en cualquier momento."
+              android:text="La temperatura normal está entre 36.1 °C y 37.2 °C. Hay fiebre si supera los 37.5 °C e hipotermia si baja de los 35 °C."
               android:textColor="@color/white"
               android:textAppearance="@style/TextAppearance.AppCompat.Small"/>
           <ImageButton
@@ -247,7 +247,7 @@
               android:id="@+id/titleTextView"
               android:layout_width="match_parent"
               android:layout_height="wrap_content"
-              android:text="¿La app guarda automáticamente mis datos o tengo que hacer algo?"
+              android:text="¿Por qué los resultados de mi presión arterial o temperatura pueden variar de una medición a otra?"
               android:textColor="@color/Azul"
               android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
 
@@ -258,7 +258,7 @@
               android:layout_margin="25dp"
               android:textStyle="bold|italic"
               android:textSize="19dp"
-              android:text="Sí, la app guarda automáticamente tus mediciones y las organiza para que puedas consultarlas en cualquier momento."
+              android:text="Las mediciones pueden variar dependiendo de factores como la postura, el estrés, el nivel de hidratación, la hora del día, o la precisión del dispositivo. Es importante hacer las mediciones en un entorno tranquilo y bajo las mismas condiciones cada vez."
               android:textColor="@color/Azul"
               android:textAppearance="@style/TextAppearance.AppCompat.Small"/>
           <ImageButton
@@ -293,7 +293,7 @@
               android:id="@+id/titleTextView4"
               android:layout_width="match_parent"
               android:layout_height="wrap_content"
-              android:text="¿La app guarda automáticamente mis datos o tengo que hacer algo?"
+              android:text="¿Qué hago si la app no detecta el dispositivo?"
               android:textAppearance="@style/TextAppearance.AppCompat.Large"
               android:textColor="@color/white" />
 
@@ -304,7 +304,7 @@
               android:layout_margin="25dp"
               android:textStyle="bold|italic"
               android:textSize="19dp"
-              android:text="Sí, la app guarda automáticamente tus mediciones y las organiza para que puedas consultarlas en cualquier momento."
+              android:text="Asegúrate de que el Bluetooth esté activado en tu teléfono y que el dispositivo esté cerca. Si no funciona, intenta reiniciar la app y el dispositivo."
               android:textAppearance="@style/TextAppearance.AppCompat.Small"
               android:textColor="@color/white" />
           <ImageButton
@@ -339,7 +339,7 @@
               android:id="@+id/titleTextView5"
               android:layout_width="match_parent"
               android:layout_height="wrap_content"
-              android:text="¿La app guarda automáticamente mis datos o tengo que hacer algo?"
+              android:text="¿Las recomendaciones de la app son personalizadas?"
               android:textColor="@color/Azul"
               android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
 
@@ -350,7 +350,7 @@
               android:layout_margin="25dp"
               android:textStyle="bold|italic"
               android:textSize="19dp"
-              android:text="Sí, la app guarda automáticamente tus mediciones y las organiza para que puedas consultarlas en cualquier momento."
+              android:text="Sí, la app te da recomendaciones basadas en tus mediciones y en tu historial de salud."
               android:textColor="@color/Azul"
               android:textAppearance="@style/TextAppearance.AppCompat.Small"/>
           <ImageButton
