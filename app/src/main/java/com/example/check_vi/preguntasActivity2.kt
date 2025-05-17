@@ -45,34 +45,6 @@ class preguntasActivity2 : AppCompatActivity() {
             val intent = Intent(this, inicioActivity2::class.java)
             startActivity(intent)
         }
-        val descriptions = listOf(
-            findViewById<TextView>(R.id.descriptionTextView1),
-            findViewById<TextView>(R.id.descriptionTextView2),
-            findViewById<TextView>(R.id.descriptionTextView3),
-            findViewById<TextView>(R.id.descriptionTextView),
-            findViewById<TextView>(R.id.descriptionTextView4),
-            findViewById<TextView>(R.id.descriptionTextView5)
-        )
 
-        val buttons = listOf(
-            findViewById<ImageButton>(R.id.imageButton),
-            findViewById<ImageButton>(R.id.imageButton1),
-            findViewById<ImageButton>(R.id.imageButton2),
-            findViewById<ImageButton>(R.id.imageButton3),
-            findViewById<ImageButton>(R.id.imageButton4),
-            findViewById<ImageButton>(R.id.imageButton5)
-        )
-
-        // Ocultar todos al principio
-        descriptions.forEach { it.visibility = View.GONE }
-
-        buttons.forEachIndexed { index, button ->
-            button.setOnClickListener {
-                // Oculta todos
-                descriptions.forEach { it.visibility = View.GONE }
-                // Muestra solo el que corresponde
-                descriptions[index].visibility = View.VISIBLE
-            }
-        }
     }
 }
